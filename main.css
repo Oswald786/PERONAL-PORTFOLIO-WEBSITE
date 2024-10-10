@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+    background-color:#0D0D0D ;
+}
+.mainText{
+    color:#F0F0F0;
+    font-family: Roboto;
+}
+button{
+    background-color:#FF7F50;
+    color: #F0F0F0;
+}
+.KeyText{
+    color:#FF7F50;
+    font-family:Poppins;
+    font-size: 1.2em;
+
+}
+
+.navContainer{
+    display: flex;
+    align-items: flex-start;
+}
+.PageTitle{
+    flex-grow: 2;
+    width: 60%;
+    color:#FF7F50;
+    font-family:poppins;
+    padding-left: 5%;
+    font-size: 2.2em;
+}
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 15px;
+}
+nav a {
+    background-color:#FF7F50;
+    color: #F0F0F0;
+    padding: 20px;
+}
