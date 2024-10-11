@@ -36,12 +36,12 @@
         </section>
 
         <section>
+            <h1 style="text-align: center;">Who am i </h1>
             <div class="aboutSelfContainer">
                 <div>
                     <img src="/Developer photo.jpg" alt="Pcture of a devbeloepr at work">
                 </div>
                 <div class="aboutSelfContainerText">
-                    <h1 class="key">Who am i </h1>
                     <p>My name is Ethan, and I am currently honing and developing my software engineering skills, which I intend to use to create software masterpieces and help build innovative solutions for present and future problems.
                         <br>
                         I have previously created software, as demonstrated in the portfolio section of my website. If you would like to see those projects, please feel free to check them out.
@@ -54,16 +54,19 @@
         </section>
 
         <section>
-            <h1 >Introduction to <strong><u>Services</u></strong> i offer</h1>
-            <div>
-                <div>
+            <!----YOU NEED TO FIND A WAY TO FIX THIS FUNCTION IT ISNT WORKING AND IS BROKEN NO IDEA WHY AS IN THE CONSOLE EVEYRHTING SEEMS TO BE ADDING AS NORMAL-->
+            <h1 class="servicesIntroHeader">Select a <strong><u>Service</u></strong> i offer below</h1>
+            <div class="serviceBreifSelector">
+                <div class="serviceOptions">
                     <ul>
-                        <li id="">bespoke Website design</li>
-                        <li>javascript development</li>
-                        <li>website styling</li>
+                        <li><button id="WebsiteDevelopement" onclick="showWebDevDescription()"">design</button></li>
+                        <li id="JavascriptDev">javascript development</li>
+                        <li id="websiteStyling">website styling</li>
                     </ul>
                 </div>
-                <div id="chosenService"></div>
+                <div class="chosenService" id="chosenService">
+                    <p class="ServiceDescription" id="ServiceDescription"></p>
+                </div>
             </div>
         </section>
 
