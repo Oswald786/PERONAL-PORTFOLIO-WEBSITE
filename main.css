@@ -22,12 +22,13 @@ button{
     align-items: flex-start;
 }
 .PageTitle{
-    flex-grow: 2;
     width: 60%;
     color:#FF7F50;
     font-family:poppins;
     padding-left: 5%;
     font-size: 2.2em;
+    margin-top: ;
+    
 }
 nav {
     display: flex;
@@ -38,5 +39,11 @@ nav {
 nav a {
     background-color:#FF7F50;
     color: #F0F0F0;
-    padding: 20px;
+    padding: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 3px;
+}
+nav a:hover{
+    transform: scale(1.5, 1.5);
 }
