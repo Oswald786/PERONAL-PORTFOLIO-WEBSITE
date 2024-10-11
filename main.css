@@ -170,6 +170,10 @@ nav a:hover{
     padding: 5px 5% 5px 5%;
     width: 50%;
     height: 130px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 
 }
 .chosenService{
@@ -182,4 +186,8 @@ nav a:hover{
 }
 .ServiceDescription{
     color: white;
+}
+.serviceOptions button{
+    font-size: 1.3em;
+    padding: 3px;
 }
