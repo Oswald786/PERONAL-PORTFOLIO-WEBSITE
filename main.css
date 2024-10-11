@@ -2,6 +2,10 @@ body{
     margin: 0px;
     background-color:#0D0D0D ;
 }
+p{
+    color:#F0F0F0;
+    font-family: Roboto; 
+}
 .mainText{
     color:#F0F0F0;
     font-family: Roboto;
@@ -14,12 +18,20 @@ button{
     color:#FF7F50;
     font-family:Poppins;
     font-size: 1.2em;
-
+}
+h1, h2, h3, h4, h5, h6{
+    color:#FF7F50;
+    font-family:Poppins;
+    font-size: 1.2em;
 }
 
+/*THE FOLLOWING IS FOR THE NAVIGATION TAB WITH THE DIRECTORY AND TITLE*/
 .navContainer{
     display: flex;
     align-items: flex-start;
+    position: sticky;
+    top: 0px;
+    background-color: black;
 }
 .PageTitle{
     width: 60%;
@@ -27,8 +39,7 @@ button{
     font-family:poppins;
     padding-left: 5%;
     font-size: 2.2em;
-    margin-top: ;
-    
+  
 }
 nav {
     display: flex;
@@ -46,4 +57,97 @@ nav a {
 }
 nav a:hover{
     transform: scale(1.5, 1.5);
+}
+
+@media only screen and (max-width:958px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 15px;
+    }
+    .navContainer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    nav a {
+        margin-top: 3px;
+        margin-bottom:  3px;
+    }
+    .PageTitle{
+        font-size: 5.2em;
+    }
+    
+}
+
+/*the following is the image section with a small intro a hire me and contact me button as well*/
+
+.titleSection{
+    width: 100%;
+    height: 500px;
+    background-image: url(background\ image.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleSectionContent{
+    align-self: center;
+    justify-content: center;
+}
+.titleSectionContent h1{
+    text-align: center;
+    color:#FF7F50;
+    font-family:Poppins;
+    font-size: 4.7em;
+}
+
+
+.titleSectionContactButtons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.titleSectionContactButtonsIndividual{
+    padding: 20px;
+    font-size: larger;
+    border-radius: 5px;
+}
+
+/*about self container css and styling*/
+.aboutSelfContainer{
+    display: flex;
+    justify-content: space-between;
+    margin: 45px 20%;
+
+}
+.aboutSelfContainer div img{
+    width: 350px;
+    padding: right 20px;
+}
+.aboutSelfContainer .aboutSelfContainerText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+}
+
+@media only screen and (max-width:958px) {
+    .aboutSelfContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 45px 20%;
+    }
+    .aboutSelfContainer div img{
+        width: 100%;
+        
+    }
+
+
 }
