@@ -165,3 +165,24 @@ nav a:hover{
 .ServiceOptionDetails{
     display: none;
 }
+
+/*Game display and text*/
+.gameUserInterface{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameUserEnter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gameUserEnter button{
+    margin: 50px 20%;
+    font-size: xx-large;
+    padding: 25px;
+    border-radius: 10px;
+}
