@@ -48,8 +48,8 @@ function ShowWebSupport(){
 }
 
 
-let CorrectNumber = 0;
 let points = 0
+Lives = 5
 
 function GenerateNumber(){
     UnformattedNumber = Math.random() * 100
@@ -57,11 +57,6 @@ function GenerateNumber(){
     return CorrectNumber
 }
 
-
-function GenerateLives(){
-    Lives = 5
-    return Lives
-}
 
 
 function CheckNumber(){
@@ -85,35 +80,34 @@ function CheckNumber(){
         console.log(Lives)
     }
     else if(answer > lowerBound && answer < UpperBound){
+        Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Getting Closer"
         ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
-        Lives -= 1
 
     }
     else if (answer > (CorrectNumber + 5)){
+        Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Too HIGH"
         ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
-        Lives -= 1
        
     }
     else if (answer < (CorrectNumber - 5)){
+        Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Too LOW"
         ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
-        Lives -= 1
       
     }
 }
-    if (Lives <= 0){
+    if (Lives <= 2){
         Result.innerHTML = ""
-        Result.innerHTML += "You have ran out of lves and will need to restart guess again and it will generate a new number the correct number was " + CorrectNumber
+        Result.innerHTML += "You have ran out of lives and will need to restart guess again and it will generate a new number the correct number was " + CorrectNumber
         Lives = 5
-        DisplayGame()
 }
 }
 
@@ -125,6 +119,8 @@ function DisplayGame(){
 
     if (DisplayStatus === "flex"){
         gameInterface.style.display = "none"
+        Lives = 5
+        points = 0
     }
     else if (DisplayStatus === "none"){
         gameInterface.style.display = "flex"
@@ -134,18 +130,3 @@ function DisplayGame(){
         console.log(Lives)
     }
 }
-
-/*function ShowResult(){
-    gameInterface = document.getElementById("gameInterface");
-    gameInterfaceState = window.getComputedStyle(gameInterface);
-    DisplayStatus = gameInterfaceState.getPropertyValue("display")
-
-    Result = CorrectNumber
-    ResultDisplayArea = document.getElementById("result")
-
-
-    if (DisplayStatus === "flex" && Lives <= 0){
-        ResultDisplayArea += Result
-        console.log("RESULT HAS BEEN GIVEN DEPLOYING GAME CLOSOURE")
-    }
-}*/

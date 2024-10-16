@@ -46,6 +46,8 @@ nav {
     align-items: flex-end;
     justify-content: flex-end;
     padding: 15px;
+    padding-right: 0px;
+    flex-grow: 2;
 }
 nav a {
     background-color:#FF7F50;
