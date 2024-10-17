@@ -82,6 +82,18 @@ nav a:hover{
         font-size: 5.2em;
     }
     
+    .aboutSelfContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 45px 20%;
+    }
+    .aboutSelfContainer div img{
+        width: 100%;
+        
+    }
+
+    
 }
 
 /*the following is the image section with a small intro a hire me and contact me button as well*/
@@ -139,20 +151,6 @@ nav a:hover{
     padding-left: 20px;
 }
 
-@media only screen and (max-width:958px) {
-    .aboutSelfContainer{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 45px 20%;
-    }
-    .aboutSelfContainer div img{
-        width: 100%;
-        
-    }
-
-
-}
 
 /*Services text and header*/
 .ServiceOption{
@@ -195,6 +193,7 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    margin-bottom: 0px;
 
 }
 .footerContainerLink a{
@@ -214,4 +213,66 @@ nav a:hover{
 
 .footerContainerLink a:hover{
     box-shadow: grey 1px 2px 5px ;
+}
+
+/*This is for the about me styling nothing more*******************************************************/
+
+.contentBlockItems{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #0D0D0D;
+    font-size: 1.4em;
+    width: 80%;
+    margin: 5px 10%;
+}
+.contentBlock-1{
+    background-color: black;
+    /*border-color: #0D0D0D;*/
+    background-image: linear-gradient(-45deg, black 0%, black 25%, black 51%, blue 100%);
+    animation: 20s ease infinite;
+    animation-name:AnimatedBG;
+    border-radius: 5px;
+    border: 1px;
+    padding: 15px;
+    box-shadow: #FF7F50 2px 5px 5px;
+    margin-top: 50px;
+    width: 100%;
+
+}
+.contentBlock-2{
+    background-color: black;
+    border-color: #0D0D0D;
+    border-radius: 5px;
+    border: 1px;
+    padding: 15px;
+    box-shadow: #FF7F50 2px 5px 5px;
+    margin-top: 50px;
+    width: 100%;
+    
+}
+.contentBlock-3{
+    background-color: black;
+    border-color: #0D0D0D;
+    border-radius: 5px;
+    border: 1px;
+    padding: 15px;
+    box-shadow: #FF7F50 2px 5px 5px;
+    margin-top: 50px;
+    width: 100%;
+    margin-bottom: 25px ;
+    color: white;
+}
+
+@keyframes AnimatedBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

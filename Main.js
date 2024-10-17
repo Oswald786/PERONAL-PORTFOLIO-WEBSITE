@@ -1,50 +1,19 @@
-function ShowWebDesignServiceDetails() {
-    let Service1Details = document.getElementById("webSiteDesignDetails");
-    let CurrentDesign = window.getComputedStyle(Service1Details);
+
+function ToggleServiceDetails(Service){
+    let ServiceChosen = Service
+    let CurrentDesign = window.getComputedStyle(ServiceChosen);
 
     let Display = CurrentDesign.getPropertyValue("display")
     console.log(Display)
+
     if (Display === 'none'){
-        Service1Details.style.display = 'block'
+        ServiceChosen.style.display = 'block'
         console.log("display changed to :" + CurrentDesign)
     }
     else if (Display === 'block'){
-        Service1Details.style.display  = 'none'
+        ServiceChosen.style.display  = 'none'
         console.log("display changed to :" + CurrentDesign)
     }
-}
-
-function ShowWebOptimization() {
-    let Service1Details = document.getElementById("WebOptimization");
-    let CurrentDesign = window.getComputedStyle(Service1Details);
-
-    let Display = CurrentDesign.getPropertyValue("display")
-    console.log(Display)
-    if (Display === 'none'){
-        Service1Details.style.display = 'block'
-        console.log("display changed to :" + CurrentDesign)
-    }
-    else if (Display === 'block'){
-        Service1Details.style.display  = 'none'
-        console.log("display changed to :" + CurrentDesign)
-    }
-}
-
-function ShowWebSupport(){
-    let Service1Details = document.getElementById("webFixing");
-    let CurrentDesign = window.getComputedStyle(Service1Details);
-
-    let Display = CurrentDesign.getPropertyValue("display")
-    console.log(Display)
-    if (Display === 'none'){
-        Service1Details.style.display = 'block'
-        console.log("display changed to :" + CurrentDesign)
-    }
-    else if (Display === 'block'){
-        Service1Details.style.display  = 'none'
-        console.log("display changed to :" + CurrentDesign)
-    }
-
 }
 
 
@@ -61,7 +30,6 @@ function GenerateNumber(){
 
 function CheckNumber(){
     console.log(CorrectNumber)
-    hint = document.getElementById("hint").innerText
     let answer = parseInt(document.getElementById("answer").value)
     Result = document.getElementById("result")
 
@@ -79,19 +47,17 @@ function CheckNumber(){
         console.log(CorrectNumber) 
         console.log(Lives)
     }
-    else if(answer > lowerBound && answer < UpperBound){
+    else if(answer > lowerBound && answer < UpperBound && answer <= 100){
         Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Getting Closer"
-        ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
 
     }
-    else if (answer > (CorrectNumber + 5)){
+    else if (answer > (CorrectNumber + 5) && answer <= 100){
         Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Too HIGH"
-        ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
        
     }
@@ -99,34 +65,49 @@ function CheckNumber(){
         Lives -= 1
         Result.innerHTML = ""
         Result.innerHTML += "Too LOW"
-        ShowResult()
         console.log("Result is " + Result + " YOU HAVE:" + Lives)
       
     }
+    else if(answer > 100){
+        RangeError("invalid value")
+        restartGame()
+        alert("Value entered for number guessing game must be 1-100")
+
+    }
 }
-    if (Lives <= 2){
+    if (Lives === 0){
         Result.innerHTML = ""
-        Result.innerHTML += "You have ran out of lives and will need to restart guess again and it will generate a new number the correct number was " + CorrectNumber
+        Result.innerHTML += "You have ran out of lives and will need to restart guess again and it will generate a new number the correct number was " + CorrectNumber + " you had " + Lives + " Lives"
         Lives = 5
 }
 }
 
 
-function DisplayGame(){
+function toggleGameDisplay(){
     gameInterface = document.getElementById("gameInterface");
     gameInterfaceState = window.getComputedStyle(gameInterface);
     DisplayStatus = gameInterfaceState.getPropertyValue("display")
 
     if (DisplayStatus === "flex"){
         gameInterface.style.display = "none"
-        Lives = 5
-        points = 0
     }
     else if (DisplayStatus === "none"){
         gameInterface.style.display = "flex"
-        GenerateNumber()
-        GenerateLives()
-        console.log(CorrectNumber)
-        console.log(Lives)
     }
+}
+
+
+function BeginGame(){
+    Lives = 5
+    points = 0
+    GenerateNumber()
+    console.log(CorrectNumber)
+    console.log(Lives)
+    toggleGameDisplay()
+}
+
+function restartGame(){
+    Result = document.getElementById("result")
+    Result.innerHTML = ""
+    toggleGameDisplay()
 }
