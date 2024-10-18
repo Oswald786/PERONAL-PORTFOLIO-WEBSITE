@@ -111,3 +111,44 @@ function restartGame(){
     Result.innerHTML = ""
     toggleGameDisplay()
 }
+
+
+/*The following is the functiuon for my form to colelct or data save to session storage and log all things that have been fuleld and create a data packet for a server.*/
+
+function submitForm() {
+    FirstName = document.getElementById("Firstname").value;
+    console.log(FirstName);
+    MiddleName = document.getElementById("Middlename").value;
+    console.log(MiddleName);
+    LastName = document.getElementById("Lastname").value;
+    console.log(LastName);
+
+    Emailaddress = document.getElementById("Emailaddress").value;
+    console.log(Emailaddress);
+    Phonenumber = document.getElementById("Phonenumber").value;
+    console.log(Phonenumber);
+    Contactpreference = document.getElementById("Contactpreference").value;
+
+    Query = document.getElementById("Query").value;
+    console.log(Query);
+    Description = document.getElementById("Description").value;
+    console.log(Description)
+
+    Identity = FirstName + " " + MiddleName + " " + LastName;
+    ContactDetails = " Email: " + Emailaddress + " Phone number: " + Phonenumber + " Contact Preference: " + Contactpreference;
+    MessageDetail = " Query Catagory: " + Query + " Description: " + Description;
+
+    DataPacket = {
+        name : Identity,
+        Contact : ContactDetails,
+        Message : MessageDetail
+    }
+    console.log(DataPacket)
+
+
+
+
+
+
+
+}
