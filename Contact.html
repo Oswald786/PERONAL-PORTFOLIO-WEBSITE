@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CodeCraft Labs</title>
+        <meta name="keywords" content="engineering,software,specialist"/>
+        <meta name="description" content="Abreif oveview of projects and developments created and crafted by ethan slade"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="main.css"/>
+        <script src="Main.js"></script>
+    </head>
+    <body>
+        <!---NAVIGATION BAR SECTION USE FOR BASIC NAVIGATION-->
+        <div class="navContainer">
+        <h1 class="PageTitle">CodeCraft Labs</h1>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/AboutMe.html">About</a>
+            <a href="">Contact</a>
+            <a href="">Portfolio</a>
+        </nav>
+        </div>
+
+        <!---THIS EECTION IS FOR THE CONTACT FORM AND ITS CONTAINERS-->
+        <div class="contactForm">
+            <form form="ContactUs">
+            <!---this first section is peronal details name first & last as well as title-->
+            <div class="PeronalDetailsSection">
+                <fieldset>
+                <label for="Firstname">First name</label>
+                <input type="text" required maxlength="20" id="Firstname">
+                <br>
+                <label for="Middlename">Middle name</label>
+                <input type="text" maxlength="20" id="Middlename">
+                <br>
+                <label for="Lastname">Last Name name</label>
+                <input type="text" required maxlength="20" id="Lastname">
+                </fieldset>
+            </div>
+
+            <!--this section will be useed for the contact information of customer-->
+            <div class="ContactDetailsSection">
+                <fieldset>
+                    <label for="Emailaddress">Email Address</label>
+                    <input type="email" minlength="1" maxlength="25" id="Emailaddress">
+                    <br>
+                    <label for="Phonenumber">Phone Number</label>
+                    <input type="number" required minlength="1" maxlength="10" id="Phonenumber">
+                    <br>
+                    <label for="Contactpreference">Contact Preference</label>
+                    <select name="Contactpreference" id="Contactpreference">
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                    </select>
+                </fieldset>
+
+            </div>
+
+            <!--this section will contain the general query in question and what if any comments they would like to add-->
+            <div class="QuerySectionDetails">
+                <fieldset>
+                    <label for="Query">Query</label>
+                    <select name="Query" id="Query">
+                        <option value="collaberating">I am interested in collaberating</option>
+                        <option value="websiteBuilding">I need a website</option>
+                        <option value="pricing">I would like to know more in terms of pricing</option>
+                        <option value="meeting">I would like a meeting</option>
+                        <option value="other">other</option>
+                    </select>
+                    <br>
+                    <label for="Description">Enter any extra notes or description you want to add</label>
+                    <br>
+                    <textarea class="DescriptionextArea" form="ContactUs" type="text" id="Description" area name="Description" maxlength="200" cols="100" rows="20" placeholder="Enter your notes here" ></textarea>
+                </fieldset>
+
+            </div>
+            <input type="button" onclick="submitForm()">
+            </form>
+            
+        </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="footerContainer-ContactForm">
+            <div class="footerContainerSocial">
+                <a href=""><img>FACEBOOK IMAGE</a>
+                <a href=""><img> INSTAGRAM IMAGE</a>
+                <a href=""><img>EMAIL ADDRESS IMAGE</a>
+            </div>
+            <br>
+            <div class="footerContainerLink">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact Me</a>
+            <a href="">Portfolio</a>
+            </div>
+        </div>
+
+
+
+    </body>
+    <footer>
+
+    </footer>
+</html>

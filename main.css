@@ -194,9 +194,13 @@ nav a:hover{
 .footerContainer{
     background-color: white;
     display: flex;
+    
+    
+    bottom: 0px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    padding-bottom: 20px;
     margin-bottom: 0px;
 
 }
@@ -285,4 +289,46 @@ nav a:hover{
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+/*CONTACT FROM CSS*/
+.contactForm{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.ContactDetailsSection{
+    font-size: larger;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.PeronalDetailsSection{
+    font-size: larger;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.QuerySectionDetails{
+    font-size: larger;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.DescriptionextArea{
+}
+.footerContainer-ContactForm{
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+display: flex;
+bottom: 0px;
+width: 100%;
+flex-direction: column;
+align-items: center;
+padding-bottom: 20px;
+margin-bottom: 0px;
 }
