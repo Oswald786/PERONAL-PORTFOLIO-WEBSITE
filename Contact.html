@@ -27,13 +27,13 @@
             <div class="PeronalDetailsSection">
                 <fieldset>
                 <label for="Firstname">First name</label>
-                <input type="text" required maxlength="20" id="Firstname">
+                <input class="ContactFormField" type="text" required maxlength="20" id="Firstname">
                 <br>
                 <label for="Middlename">Middle name</label>
-                <input type="text" maxlength="20" id="Middlename">
+                <input class="ContactFormField" type="text" maxlength="20" id="Middlename">
                 <br>
                 <label for="Lastname">Last Name name</label>
-                <input type="text" required maxlength="20" id="Lastname">
+                <input class="ContactFormField" type="text" required maxlength="20" id="Lastname">
                 </fieldset>
             </div>
 
@@ -41,13 +41,14 @@
             <div class="ContactDetailsSection">
                 <fieldset>
                     <label for="Emailaddress">Email Address</label>
-                    <input type="email" minlength="1" maxlength="25" id="Emailaddress">
+                    <input class="ContactFormField" type="email" minlength="1" maxlength="25" id="Emailaddress">
                     <br>
                     <label for="Phonenumber">Phone Number</label>
-                    <input type="number" required minlength="1" maxlength="10" id="Phonenumber">
+                    <input class="ContactFormField" type="number" required minlength="1" maxlength="10" id="Phonenumber">
                     <br>
                     <label for="Contactpreference">Contact Preference</label>
-                    <select name="Contactpreference" id="Contactpreference">
+                    <select class="ContactFormField" name="Contactpreference" id="Contactpreference">
+                        <option value="" selected>Select option</option>
                         <option value="Morning">Morning</option>
                         <option value="Afternoon">Afternoon</option>
                     </select>
@@ -59,7 +60,7 @@
             <div class="QuerySectionDetails">
                 <fieldset>
                     <label for="Query">Query</label>
-                    <select name="Query" id="Query">
+                    <select class="ContactFormField" name="Query" id="Query">
                         <option value="collaberating">I am interested in collaberating</option>
                         <option value="websiteBuilding">I need a website</option>
                         <option value="pricing">I would like to know more in terms of pricing</option>
@@ -69,11 +70,11 @@
                     <br>
                     <label for="Description">Enter any extra notes or description you want to add</label>
                     <br>
-                    <textarea class="DescriptionextArea" form="ContactUs" type="text" id="Description" area name="Description" maxlength="200" cols="100" rows="20" placeholder="Enter your notes here" ></textarea>
+                    <textarea spellcheck="true" class="DescriptionextArea" form="ContactUs" type="text" id="Description" area name="Description" maxlength="200" cols="100" rows="20" placeholder="Enter your notes here" ></textarea>
                 </fieldset>
 
             </div>
-            <input type="button" onclick="submitForm()">
+            <input type="button" onclick="submitForm()" id="Submit" value="Submit Form">
             </form>
             
         </div>
