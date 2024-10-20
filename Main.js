@@ -153,4 +153,58 @@ function submitForm() {
 
 }
 
+function ProjectSelector(ProjectWanted) {
+    CBS_Website = document.getElementById("CBS_Website");
+    project2 = document.getElementById("project2");
+    project3 = document.getElementById("project3");
+
+    if (ProjectWanted == CBS_Website){
+        console.log("true");
+        ToggleProjectDetailson(CBS_Website);
+
+        ToggleProjectDetailsoff(project2)
+        ToggleProjectDetailsoff(project3)
+    }
+    else if (ProjectWanted == project2){
+        ToggleProjectDetailson(project2);
+
+        ToggleProjectDetailsoff(CBS_Website)
+        ToggleProjectDetailsoff(project3)
+    }
+    else if(ProjectWanted == project3){
+        ToggleProjectDetailson(project3);
+
+        ToggleProjectDetailsoff(CBS_Website)
+        ToggleProjectDetailsoff(project2)
+
+    }
+}
+
+
+
+function ToggleProjectDetailson(Project){
+    let ProjectChosen = Project
+    let CurrentDisplay = window.getComputedStyle(ProjectChosen);
+
+    let Display = CurrentDisplay.getPropertyValue("display")
+    console.log(Display)
+
+    if (Display === 'none'){
+        ProjectChosen.style.display = 'block'
+        console.log("display changed to :" + CurrentDisplay)
+    }
+}
+
+function ToggleProjectDetailsoff(Project){
+    let ProjectChosen = Project
+    let CurrentDisplay = window.getComputedStyle(ProjectChosen);
+
+    let Display = CurrentDisplay.getPropertyValue("display")
+    console.log(Display)
+
+    if (Display === 'block'){
+        ProjectChosen.style.display  = 'none'
+        console.log("display changed to :" + CurrentDisplay)
+    }
+}
 

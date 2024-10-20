@@ -172,6 +172,8 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .ShowMoreButton:hover{
@@ -340,43 +342,43 @@ margin-bottom: 0px;
 
 }
 
-/*this section is for the flip cards*/
-.flip-card{
-    width: 100%;
-    height: 100%;
-    perspective: 1000px;
-}
 
-.flip-card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style:preserve-3d;
-}
+/*for use on p[ortfolio sel;ection device*/
 
-.flip-card:hover .flip-card-inner{
-    transform: rotateY(180deg);
+.selectioncontentPosition{
+    position:absolute;
+    top: 250;
+    width: 80%;
+    margin: 10px 10%;
 }
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-.flip-card-front {
-    background-color: #FF7F50;
-    color: white;
-}
-.flip-card-back{
-    background-color: #FF7F50;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-/*Portfolio prjects laytout info*/
-.portfolioProjectsContainer{
+.project_Selection{
     display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    margin: 10px 10%;
+    grid-gap: 5px 5px ;
+}
+.Portfolio_selection_header{
+    text-align: center;
+}
+.selectionOption{
+    border: #F0F0F0;
+    background-color: #FF7F50;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+.selectionOption h1,h2,h3,h4,h5,h6{
+    color: white;
+}
+.selectionOption:hover{
+    background-color: blue;
+    text-shadow: #0D0D0D 2px 1px 3px;
+}
+
+.selected__portfolio{
+   text-align: center;
+}
+.portfolio-option{
+    display: none;
 }
